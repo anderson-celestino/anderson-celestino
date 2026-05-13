@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>MoviePlay</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#111827">
+</head>
+
+<body>
+
+  <header class="hero">
+
+    <div class="overlay">
+
+      <h1>MoviePlay</h1>
+
+      <p>Assista hoje, guarde para amanhã! Seu PWA de filmes pessoais.</p>
+
+    </div>
+
+  </header>
+
+  <main class="container">
+
+    <section class="form-section">
+
+      <h2>Adicionar um filme</h2>
+
+      <form id="movieForm">
+
+        <input
+          type="text"
+          id="titulo"
+          placeholder="Título do filme"
+          required
+        >
+
+        <input
+          type="number"
+          id="ano"
+          placeholder="Ano de lançamento"
+          min="1900"
+          max="2100"
+          required
+        >
+
+        <select id="genero" required>
+
+          <option value="">
+            Selecione o gênero
+          </option>
+
+          <option value="Ação">
+            Ação
+          </option>
+
+          <option value="Animação">
+            Animação
+          </option>
+
+          <option value="Comédia">
+            Comédia
+          </option>
+
+          <option value="Romance">
+            Romance
+          </option>
+
+          <option value="Terror">
+            Terror
+          </option>
+
+        </select>
+
+        <input
+          type="number"
+          id="nota"
+          placeholder="Nota (0 a 10)"
+          min="0"
+          max="10"
+          required
+        >
+
+        </select>
+
+        <button type="submit">
+          Salvar
+        </button>
+
+      </form>
+
+    </section>
+
+    <section class="list-section">
+
+      <h2>Filmes cadastrados</h2>
+
+      <div id="movieList" class="movie-list">
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
